@@ -1,0 +1,72 @@
+#include<iostream>
+using namespace std;
+
+class A{
+	
+	protected:
+		
+		int a,b,c;
+		
+	public:
+		
+		void input(){
+			
+			cout<<"Enter a two numbers :";
+			cin>>a>>b;
+			
+		}
+		void add(){
+			c=a+b;
+			cout<<endl<<"Addition :"<<c<<endl;
+			
+		}
+	
+	
+};
+
+
+class B : public A{
+	
+	public:
+	
+	void sub(){
+		
+	c=a-b;
+	cout<<"Substraction :"<<c<<endl;
+	
+	}
+	
+	
+};
+
+class C : public B{
+	
+	public:
+	
+	void multi(){
+		
+		c=a*b;
+		cout<<"Multiplication :"<<c;
+		
+	}
+	
+	void div(){
+		c=a/b;
+		cout<<endl<<"Division :"<<c;
+		
+	}
+	
+};
+
+int main(){
+	
+	C c;
+	
+	c.input();
+	
+	c.add();
+	c.sub();
+	c.multi();
+	c.div();
+	return 0;
+}
